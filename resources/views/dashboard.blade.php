@@ -12,10 +12,13 @@
                     {{ __("You're logged in!") }}
                     <p>Este contenido es publico</p>
                     @role('admin')
-                    <p>solo lo ve el admin</p>
+                        <p>solo lo ve el admin</p>
                     @endrole
                     @role('escritor')
-                    <p>solo el escritor</p>
+                        <p>solo el escritor</p>
+                    @endrole
+                    @role('lectura')
+                        <p>solo el lector</p>
                     @endrole
                 </div>
             </div>
