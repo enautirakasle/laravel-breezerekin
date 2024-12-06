@@ -17,12 +17,18 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/miren', function(){
-    return 'Kaixo miren';
-})->middleware(['auth', 'verified'])->name('poba');
+Route::middleware('auth')->group(function () {
+    Route::get('/miren', function(){
+        return 'Kaixo miren';
+    })->name('poba');
+    
+    Route::get('/bts', function(){
+        return view('kaixo');
+    })->name('bts');
+});
 
-Route::get('/bts', function(){
-    return view('kaixo');
-})->name('bts');
+
+
+
 
 require __DIR__.'/auth.php';
