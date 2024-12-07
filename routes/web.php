@@ -27,6 +27,8 @@ Route::middleware('auth')->group(function () {
     })->name('bts');
 });
 
+Route::view('/adminlte', 'admin.index');
+
 
 
 
