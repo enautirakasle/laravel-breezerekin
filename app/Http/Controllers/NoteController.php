@@ -13,7 +13,7 @@ class NoteController extends Controller
      */
     public function index()
     {
-        //
+        return "Note controllerreko index naiz";
     }
 
     /**
