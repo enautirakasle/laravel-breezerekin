@@ -13,7 +13,9 @@ class NoteController extends Controller
      */
     public function index()
     {
-        return "Note controllerreko index naiz";
+        $notes = Note::all();
+        // dd($notes);
+        return view('note.index', compact('notes'));
     }
 
     /**
